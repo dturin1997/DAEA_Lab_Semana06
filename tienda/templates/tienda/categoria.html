@@ -1,0 +1,17 @@
+{% extends "tienda/layout.html" %}
+{% block content2 %}
+<div class="list-group">
+    {% for cate in category_list %}
+    <a href="/tienda/categoria/{{ cate.id }}/" class="list-group-item">{{ cate.nombre }}</a>
+    {% endfor %}
+</div>
+{% endblock %}
+{% block content %}
+<div class="container p-3">
+    {% for prod in productos %}
+    <ul>
+        <li>{{ prod.nombre }}</li>
+    </ul>
+    {% endfor %}
+</div>
+{% endblock%}
